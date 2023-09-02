@@ -1,5 +1,3 @@
-package Almox;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,7 +7,7 @@ public class Almoxarifado {
 
     public void addItem(Item item){
 
-        livro.add(item);
+        item.add(item);
     }
     public void addUsuario(Usuario usuario) {
         usuario.add(usuario);
@@ -17,10 +15,10 @@ public class Almoxarifado {
     public List<Item>bucarItemNome(String nome);
 
     List<Item> encontados = new LinkedList<Item>();
-    for(Item item: itens) {
-        if(item.getNome()equals(nome)encontrados.add(item));
+    //for(Item item: itens) {
+   //     if(item.getNome()equals(nomeItem) encontrados.add(item));
     }
-    return encontrados;
+   // return encontrados;
 }
 
 

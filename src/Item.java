@@ -2,11 +2,11 @@ public class Item {
     //atributos dos itens do almox
     private int id;
     private String nome;
-    private Fornecedor fornecedor;
+    private String fornecedor;
     private int localizacao;
 
     //parâmetro construtor
-    public Item(int id, String nome,Fornecedor fornecedor, int localizacao) {
+    public Item(int id, String nome, String fornecedor, int localizacao) {
         this.id = id;
         this.nome = nome;
         this.fornecedor = fornecedor;

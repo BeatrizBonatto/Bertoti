@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -15,10 +13,10 @@ public class Main {
         almoxarifado.adicionaUsuario(beatriz);
 
         // tentando logar com usuário inexistente
-        Usuario usuarioInexistente = almoxarifado.logar("gabiayumi", "123");
+        almoxarifado.logar("gabiayumi", "123");
 
         // tentando logar com senha incorreta
-        Usuario usuarioSenhaIncorreta = almoxarifado.logar("biakemi", "456");
+        almoxarifado.logar("biakemi", "456");
 
         // tentando logar com usuário cadastrado
         Usuario usuario = almoxarifado.logar("biakemi", "123");

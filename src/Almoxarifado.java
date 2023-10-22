@@ -4,6 +4,7 @@ import java.util.List;
 public class Almoxarifado {
 
     private List<Item> itens;
+
     private List<Usuario> usuarios;
 
     public List<Item> getItens() {

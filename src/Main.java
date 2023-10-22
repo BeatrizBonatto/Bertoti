@@ -12,14 +12,16 @@ public class Main {
         // cadastrando Usuario
         almoxarifado.adicionaUsuario(beatriz);
 
+        Usuario usuario;
+
         // tentando logar com usuário inexistente
-        almoxarifado.logar("gabiayumi", "123");
+        usuario = almoxarifado.logar("gabiayumi", "123");
 
         // tentando logar com senha incorreta
-        almoxarifado.logar("biakemi", "456");
+        usuario = almoxarifado.logar("biakemi", "456");
 
         // tentando logar com usuário cadastrado
-        Usuario usuario = almoxarifado.logar("biakemi", "123");
+        usuario = almoxarifado.logar("biakemi", "123");
 
         if(usuario != null) {
 

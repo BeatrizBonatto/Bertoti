@@ -1,47 +1,74 @@
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Almoxarifado {
-    private static List<Item> item = new LinkedList<Item>();
-    private List<Fornecedor> fornecedor = new LinkedList<Fornecedor>();
-    private List<Usuario> usuario = new LinkedList<Usuario>();
-    private List<Setor> setor = new LinkedList<Setor>();
 
-    //add item ao almoxarifado
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int x = 0;
-        while (true){
-            System.out.println("ADICIONAR ITEM");
-            System.out.println("--------------------------------");
-            System.out.println("Digite as informações do item ");
-            System.out.println("Nome: ");
-            String nomeItem = sc.next();
-            System.out.println("Fornecedor: ");
-            String fornecedorItem = sc.next();
-            System.out.println("Localização: ");
-            int localizacaoItem = sc.nextInt();
+    private List<Item> itens;
+    private List<Usuario> usuarios;
 
-            Item item1 = new Item((x+1), nomeItem, fornecedorItem,localizacaoItem);
-
-            if (item.isEmpty()) {
-                break;
-            }
-            item.add(item1);
-            System.out.println(item1);
-        }
-        sc.close();
+    public List<Item> getItens() {
+        return itens;
     }
 
-    //add Usuario
-    //buscar Item pelo Nome
-    //buscar Item pelo Id
-    //buscar Requisicao do Usuario
-    //buscar Requisicao pelo ID
-    //bucar Fornecedor pelo Nome
-    //buscar Fornecedor pelo Id
-}
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
 
-//uma lista vazia existe
-//uma lista nula não existe
+    public Almoxarifado() {
+        this.itens = new LinkedList<Item>();
+        this.usuarios = new LinkedList<Usuario>();
+    }
+
+    public void adicionaUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
+        System.out.println("Usuario nome " + usuario.getNome() +
+                " e login " + usuario.getDadosLogin().getUsuario() + " cadastrado.");
+    }
+
+    public Item buscaItem(int id) {
+        for (Item item: getItens()) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        System.out.println("Item id: " + id + " não cadastrado.");
+        return null;
+    }
+
+    public Usuario buscaUsuario(String login) {
+        for (Usuario usuario: getUsuarios()) {
+            if (usuario.getDadosLogin().getUsuario().matches(login)) {
+                return usuario;
+            }
+        }
+        System.out.println("Login " + login + " não cadastrado.");
+        return null;
+    }
+
+    public Boolean conferePermissao(String login) {
+        Usuario usuario = buscaUsuario(login);
+        if (usuario != null) {
+            return usuario.getPermissaoAlteracao();
+        }
+        System.out.println("O usuario não tem permissão.");
+        return false;
+    }
+
+    public void cadastrarItem(String login, Item item) {
+        if (conferePermissao(login)) {
+            this.itens.add(item);
+            System.out.println("O usuario " + login + " tem permissão e o item " + item.getNome() + " foi cadastrado.");
+        }
+    }
+
+    public Usuario logar(String login, String senha) {
+
+        for (Usuario usuario: getUsuarios()) {
+            if (usuario.getDadosLogin().matches(login, senha)) {
+                return usuario;
+            }
+        }
+        return null;
+    }
+
+}

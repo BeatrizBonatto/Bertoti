@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // criando Almoxerifado
+        // criando Almoxarifado
         Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando Usuario

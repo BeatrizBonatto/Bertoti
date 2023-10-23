@@ -1,9 +1,8 @@
 public class Item {
-    //atributos dos itens do almox
+
     private int id;
     private String nome;
 
-    //parâmetro construtor
     public Item(int id, String nome) {
         this.id = id;
         this.nome = nome;

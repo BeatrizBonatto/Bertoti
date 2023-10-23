@@ -24,8 +24,8 @@ public class DadosLogin {
         this.senha = senha;
     }
 
+    // verifica se o login existe e após, se a senha está correta - usado em buscarUsuario e logar
     public Boolean matches(String login, String senha) {
-
         if (!this.usuario.equals(login)){
             System.out.println("Login não encontrado.");
             return false;

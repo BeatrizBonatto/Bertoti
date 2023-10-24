@@ -21,19 +21,3 @@ Engenharia de software é diferente de programação.
 Na engenharia se é onde há desenvolvimento, manutenção e modificação do software, sendo que o software é feito na parte de programação. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-3 Exemplos de "trade off":
-
-    - Flexibilidade vs Complexidade;
-    - Tecnologias Estabelecidas vs Novas Tecnologias;
-    -  Customização vs Tempo de Desenvolvimento.
-
-
-Usuabilidade de programa
-
-
-Requisito não funcional, dê exemplo:
-  - Snapchat x Instagram:
-      - Conta vinculada à outro aplicativo, postando fotos além dos storys;
-      - Monetização e Anúncios;
-      - Algoritmo de Feed;

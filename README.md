@@ -11,14 +11,26 @@ Aulas de engenharia SW
 
 * Within Google, we sometimes say, “Software engineering is programming integrated over time.” Programming is certainly a significant part of software engineering: after all, programming is how you generate new software in the first place. If you accept this distinction, it also becomes clear that we might need to delineate between programming tasks (development) and software engineering tasks (development, modification, maintenance). The addition of time adds an important new dimension to programming. Cubes aren’t squares, distance isn’t velocity. Software engineering isn’t programming.
 
-### 2. Três exemplos de trade-offs -  14/08 [:link:]()
+### 2. Três exemplos de trade-offs -  14/08 [:link:](https://github.com/BeatrizBonatto/Bertoti/blob/organiza%C3%A7%C3%A3o/engenharia%20SW/Atv%202)
  
-### 3. Requisito não funcional de usabilidade - avaliar 10 heurísticas - 18/08 [:link:]()
+### 3. Requisito não funcional de usabilidade - avaliar 10 heurísticas - 18/08 [:link:](https://github.com/BeatrizBonatto/Bertoti/blob/organiza%C3%A7%C3%A3o/engenharia%20SW/Atv%203)
  
-### 4. Diagrama de Casos de Uso - 21/08 [:link:]()
+### 4. Diagrama de Casos de Uso - 21/08 [:link:](https://github.com/BeatrizBonatto/Bertoti/blob/organiza%C3%A7%C3%A3o/engenharia%20SW/Atv%204%20Diagrama%20Almox%20Nova%20Vers%C3%A3o.jpeg)
+
+Primeira verção do projeto, com funções básicas para o funcionario realizar em um sistema de Almoxarifado, onde sâo guardados itens diversos. Todos os funcionários podem realizar todas as ações.
+
+Já na nova versão, foi retirado relação com fornecedor e localização no almoxarifado. Nela também não são todas as ações que podem ser realizadas por todos, é necesária uma permissão para realizar alterações, que são adicionar itens ou usuários.
+
+<img src="https://github.com/BeatrizBonatto/Bertoti/blob/8d865b4a4e2a3b12a5d505db63cca11d5fa2d9c7/engenharia%20SW/Atv%204%20Diagrama%20Almox.jpeg" width="250">      <img src="https://icones.pro/wp-content/uploads/2021/06/icone-fleche-droite-bleu.png" width="250">      <img src="https://github.com/BeatrizBonatto/Bertoti/blob/7c8674963d1e485680782e1b8d3364d2ff9f2d9a/engenharia%20SW/Atv%204%20Diagrama%20Almox%20Nova%20Vers%C3%A3o.jpeg" width="437">
  
-### 5. Diagrama de Classes UML (várias versões aperfeiçoando a cada uma) - 25/08 [:link:]()
- 
+### 5. Diagrama de Classes UML (várias versões aperfeiçoando a cada uma) - 25/08 [:link:](https://github.com/BeatrizBonatto/Bertoti/blob/organiza%C3%A7%C3%A3o/engenharia%20SW/Atv%205%20Classes%20UML%20Almox.drawio)
+
+Versão mais recente do Diagrama de Classes UML.
+
+<p align="center">
+<img src="https://github.com/BeatrizBonatto/Bertoti/blob/organiza%C3%A7%C3%A3o/engenharia%20SW/Atv%205%20Classes%20UML%20Almox.png" width="750">
+</p>
+
 ### 6. Código Java (espelhando as classes UML) - 01/09 [:link:]()
  
 ### 7. Testes automatizados com técnica de teste - 21/10 [:link:]()

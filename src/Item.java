@@ -3,8 +3,7 @@ public class Item {
     private int id;
     private String nome;
 
-    public Item(int id, String nome) {
-        this.id = id;
+    public Item(String nome) {
         this.nome = nome;
     }
 

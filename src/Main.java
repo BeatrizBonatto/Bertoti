@@ -26,7 +26,7 @@ public class Main {
         if(usuario != null) {
 
             // criando Item
-            Item celular = new Item(1, "Samsung");
+            Item celular = new Item("Samsung");
 
             // tentando cadastrar item | erro usuário não encontrado
             almoxarifado.cadastrarItem("bea", celular);

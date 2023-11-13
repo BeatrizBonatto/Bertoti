@@ -5,11 +5,11 @@ import static org.junit.Assert.assertNull;
 
 public class ItemTest {
 
+    // criando almoxarifado com lista de itens e usuários
+    Almoxarifado almoxarifado = new Almoxarifado();
+
     @Test
     public void testItemCadastrado() {
-
-        // criando almoxarifado com lista de itens e usuários
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando usuario
         Usuario mateus = new Usuario("Mateus", "Luz",
@@ -32,9 +32,6 @@ public class ItemTest {
     @Test
     public void testItemNaoCadastrado() {
 
-        // criando almoxarifado com lista de itens e usuários
-        Almoxarifado almoxarifado = new Almoxarifado();
-
         // criando usuario
         Usuario mateus = new Usuario("Mateus", "Luz",
                 new DadosLogin("mateus.luz", "123456"));
@@ -52,9 +49,6 @@ public class ItemTest {
 
     @Test
     public void testIdItemAtual() {
-
-        // criando almoxarifado com lista de itens e usuários
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando usuario
         Usuario mateus = new Usuario("Mateus", "Luz",
@@ -80,9 +74,6 @@ public class ItemTest {
     @Test
     public void testBuscarItem() {
 
-        // criando almoxarifado com lista de itens e usuários
-        Almoxarifado almoxarifado = new Almoxarifado();
-
         // criando usuario
         Usuario mateus = new Usuario("Mateus", "Luz",
                 new DadosLogin("mateus.luz", "123456"));
@@ -102,9 +93,6 @@ public class ItemTest {
 
     @Test
     public void testBuscarItemNaoEncontrado() {
-
-        // criando almoxarifado com lista de itens e usuários
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando usuario
         Usuario mateus = new Usuario("Mateus", "Luz",

@@ -5,11 +5,10 @@ import static org.junit.Assert.assertNotEquals;
 
 public class LoginTest {
 
+    // criando Almoxerifado
+    Almoxarifado almoxarifado = new Almoxarifado();
     @Test
     public void testUsuarioValidoESenhaValida() {
-
-        // criando Almoxerifado
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando Usuario
         Usuario beatriz = new Usuario("Beatriz", "Bonatto",
@@ -32,9 +31,6 @@ public class LoginTest {
     @Test
     public void testUsuarioValidoESenhaInvalida() {
 
-        // criando Almoxerifado
-        Almoxarifado almoxarifado = new Almoxarifado();
-
         // criando Usuario
         Usuario beatriz = new Usuario("Beatriz", "Bonatto",
                 new DadosLogin("biakemi", "123"));
@@ -52,9 +48,6 @@ public class LoginTest {
 
     @Test
     public void testUsuarioInvalidoESenhaValida() {
-
-        // criando Almoxerifado
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando Usuario
         Usuario beatriz = new Usuario("Beatriz", "Bonatto",
@@ -77,9 +70,6 @@ public class LoginTest {
 
     @Test
     public void testUsuarioInvalidoESenhaInvalida() {
-
-        // criando Almoxerifado
-        Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando Usuario
         Usuario beatriz = new Usuario("Beatriz", "Bonatto",

@@ -11,10 +11,10 @@ public class UsuarioTest {
     public void testUsuarioAdicionado() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                          new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                          new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.getUsuarios().size(), 1);
@@ -28,12 +28,12 @@ public class UsuarioTest {
         Almoxarifado almoxarifado = new Almoxarifado();
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.getUsuarios().size(), 1);
@@ -44,13 +44,13 @@ public class UsuarioTest {
     public void testUsuarioExite() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // validação quantidade de usuários
-        assertEquals(almoxarifado.confereSeUsuarioExiste("mateus.luz"), true);
+        assertEquals(almoxarifado.confereSeUsuarioExiste("beatriz.akemi"), true);
 
     }
 
@@ -58,7 +58,7 @@ public class UsuarioTest {
     public void testUsuarioNaoExite() {
 
         // validação quantidade de usuários
-        assertEquals(almoxarifado.confereSeUsuarioExiste("mateus.luz"), false);
+        assertEquals(almoxarifado.confereSeUsuarioExiste("beatriz.akemi"), false);
 
     }
 
@@ -66,16 +66,16 @@ public class UsuarioTest {
     public void testUsuarioTemPermissaoAlteracao() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // alterando permissão
-        almoxarifado.buscaUsuario("mateus.luz").setPermissaoAlteracao(true);
+        almoxarifado.buscaUsuario("beatriz.akemi").setPermissaoAlteracao(true);
 
         // validação quantidade de usuários
-        assertEquals(almoxarifado.buscaUsuario("mateus.luz").getPermissaoAlteracao(), true);
+        assertEquals(almoxarifado.buscaUsuario("beatriz.akemi").getPermissaoAlteracao(), true);
 
     }
 
@@ -83,13 +83,13 @@ public class UsuarioTest {
     public void testUsuarioNaoTemPermissaoAlteracao() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // validação quantidade de usuários
-        assertEquals(almoxarifado.buscaUsuario("mateus.luz").getPermissaoAlteracao(), false);
+        assertEquals(almoxarifado.buscaUsuario("beatriz.akemi").getPermissaoAlteracao(), false);
 
     }
 

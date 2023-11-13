@@ -12,17 +12,17 @@ public class ItemTest {
     public void testItemCadastrado() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         // alterando permissão
-        almoxarifado.buscaUsuario("mateus.luz").setPermissaoAlteracao(true);
+        almoxarifado.buscaUsuario("beatriz.akemi").setPermissaoAlteracao(true);
 
         Item caderno = new Item("caderno");
 
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.getItens().size(), 1);
@@ -33,14 +33,14 @@ public class ItemTest {
     public void testItemNaoCadastrado() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
         Item caderno = new Item("caderno");
 
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.getItens().size(), 0);
@@ -51,20 +51,20 @@ public class ItemTest {
     public void testIdItemAtual() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
-        almoxarifado.buscaUsuario("mateus.luz").setPermissaoAlteracao(true);
+        almoxarifado.buscaUsuario("beatriz.akemi").setPermissaoAlteracao(true);
 
         Item caderno = new Item("caderno");
 
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.getIdItemAtual(), 5);
@@ -75,16 +75,16 @@ public class ItemTest {
     public void testBuscarItem() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
-        almoxarifado.buscaUsuario("mateus.luz").setPermissaoAlteracao(true);
+        almoxarifado.buscaUsuario("beatriz.akemi").setPermissaoAlteracao(true);
 
         Item caderno = new Item("caderno");
 
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
 
         // validação quantidade de usuários
         assertEquals(almoxarifado.buscaItem(1).getNome(), caderno.getNome());
@@ -95,16 +95,16 @@ public class ItemTest {
     public void testBuscarItemNaoEncontrado() {
 
         // criando usuario
-        Usuario mateus = new Usuario("Mateus", "Luz",
-                new DadosLogin("mateus.luz", "123456"));
+        Usuario Beatriz = new Usuario("Beatriz", "Akemi",
+                new DadosLogin("beatriz.akemi", "123456"));
 
-        almoxarifado.adicionaUsuario(mateus);
+        almoxarifado.adicionaUsuario(Beatriz);
 
-        almoxarifado.buscaUsuario("mateus.luz").setPermissaoAlteracao(true);
+        almoxarifado.buscaUsuario("beatriz.akemi").setPermissaoAlteracao(true);
 
         Item caderno = new Item("caderno");
 
-        almoxarifado.cadastrarItem("mateus.luz", caderno);
+        almoxarifado.cadastrarItem("beatriz.akemi", caderno);
 
         // validação quantidade de usuários
         assertNull(almoxarifado.buscaItem(2));

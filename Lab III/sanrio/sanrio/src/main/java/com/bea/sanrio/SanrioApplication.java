@@ -22,15 +22,18 @@ public class SanrioApplication {
 
 @RestController
 @RequestMapping("/personagens")
-class RestController {
+class RestApiDemoController {
 	private List<Personagem> personagens = new ArrayList<>();
 
 	public RestApiDemoController() {
 		personagens.addAll(List.of(
 				new Personagem("Hello Kitty"),
 				new Personagem("My Melody"), 
-				new Personagem("Cinnamon Roll")
+				new Personagem("Cinnamon Roll"),
+				new Personagem("Kuromi"),
+				new Personagem("Pompompurin")
 		));
+	}
 
 	@GetMapping
 	List<Personagem> getPersonagem() {
@@ -54,7 +57,7 @@ class RestController {
 		return personagem;
 	}
 
-	@PostMapping
+	@PutMapping("/{id}")
 	ResponseEntity<Personagem> putPersonagem(@PathVariable String id,
 											 @RequestBody Personagem personagem) {
 		int personagemIndex = -1;

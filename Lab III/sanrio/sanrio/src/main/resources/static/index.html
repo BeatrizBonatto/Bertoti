@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initiaç-scale=1.0">
+    <title>Sanrio</title>
+    <style>
+        /*css do foreignObject*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .personagem {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Personagens</h1>
+    <div id="personagens"></div>
+
+    <script>
+        //carregar a lista
+        async function carregarPersonagens() {
+            const response = await fetch('/personagens');
+            const data = await response.json();
+            const personagensDiv = document.getElementById('personagens');
+            personagensDiv.innerHTML = '';
+            data.forEach(personagem => {
+                const personagemDiv = document.createElement('div');
+                personagemDiv.className = 'personagem';
+                personagemDiv.innerHTML = `<strong>ID:</strong> ${personagem.id}, <strong>ID:</strong> ${personagem.nome}`;
+                personagensDiv.appendChild(personagemDiv);
+            });
+        }   
+
+        window.onload = () => {
+            carregarPersonagens();
+        }
+
+    </script>
+</body>
+
+</html>

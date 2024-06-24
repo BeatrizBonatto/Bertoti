@@ -14,92 +14,93 @@ import java.util.UUID;
 @SpringBootApplication
 public class SanrioApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SanrioApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SanrioApplication.class, args);
+    }
 
 }
 
 @RestController
 @RequestMapping("/personagens")
 class RestApiDemoController {
-	private List<Personagem> personagens = new ArrayList<>();
+    private List<Personagem> personagens = new ArrayList<>();
 
-	public RestApiDemoController() {
-		personagens.addAll(List.of(
-				new Personagem("Hello Kitty"),
-				new Personagem("My Melody"), 
-				new Personagem("Cinnamon Roll"),
-				new Personagem("Kuromi"),
-				new Personagem("Pompompurin")
-		));
-	}
+    public RestApiDemoController() {
+        personagens.addAll(List.of(
+                new Personagem("Hello Kitty"),
+                new Personagem("My Melody"),
+                new Personagem("Cinnamon Roll"),
+                new Personagem("Kuromi"),
+                new Personagem("Pompompurin")
+        ));
+    }
 
-	@GetMapping
-	List<Personagem> getPersonagem() {
-		return personagens;
-	}
+    @GetMapping
+    List<Personagem> getPersonagem() {
+        return personagens;
+    }
 
-	@GetMapping("/{id}")
-	Optional<Personagem> getPersonagemById(@PathVariable String id) {
-		for (Personagem p: personagens) {
-			if (p.getId().equals(id)) {
-				return Optional.of(p);
-			}
-		}
+    @GetMapping("/{id}")
+    Optional<Personagem> getPersonagemById(@PathVariable String id) {
+        for (Personagem p : personagens) {
+            if (p.getId().equals(id)) {
+                return Optional.of(p);
+            }
+        }
+        return Optional.empty();
+    }
 
-		return Optional.empty();
-	}
+    @PostMapping
+    Personagem postPersonagem(@RequestBody Personagem personagem) {
+        personagens.add(personagem);
+        return personagem;
+    }
 
-	@PostMapping
-	Personagem postPersonagem(@RequestBody Personagem personagem) {
-		personagens.add(personagem);
-		return personagem;
-	}
+    @PutMapping("/{id}")
+    ResponseEntity<Personagem> putPersonagem(@PathVariable String id,
+                                             @RequestBody Personagem personagem) {
+        int personagemIndex = -1;
 
-	@PutMapping("/{id}")
-	ResponseEntity<Personagem> putPersonagem(@PathVariable String id,
-											 @RequestBody Personagem personagem) {
-		int personagemIndex = -1;
+        for (Personagem p : personagens) {
+            if (p.getId().equals(id)) {
+                personagemIndex = personagens.indexOf(p);
+                personagens.set(personagemIndex, personagem);
+            }
+        }
 
-		for(Personagem p : personagens) {
-			if (p.getId().equals(id)) {
-				personagemIndex = personagens.indexOf(p);
-				personagens.set(personagemIndex, personagem);
-			}
-		}
+        return (personagemIndex == 1) ?
+                new ResponseEntity<>(postPersonagem(personagem), HttpStatus.CREATED) :
+                new ResponseEntity<>(personagem, HttpStatus.OK);
+    }
 
-		return (personagemIndex == 1) ?
-				new ResponseEntity<>(postPersonagem(personagem), HttpStatus.CREATED) :
-				new ResponseEntity<>(personagem, HttpStatus.OK);
-	}
-
-	@DeleteMapping("/{id}")
-	void deletePersonagem(@PathVariable String id) {
-		personagens.removeIf(p -> p.getId().equals(id));
-	}
+    @DeleteMapping("/{id}")
+    void deletePersonagem(@PathVariable String id) {
+        personagens.removeIf(p -> p.getId().equals(id));
+    }
 }
-	
+
 class Personagem {
-	private final String id;
-	private String nome;
-	
-	public Personagem(String id, String nome) {
-		this.id = id;
-		this.nome = nome;
-	}
+    private final String id;
+    private String nome;
 
-	public  Personagem(String nome) {
-		this(UUID.randomUUID().toString(), nome);
-	}
+    public Personagem(String id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
 
-	public String getId() {
-		return id;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}	
+    public Personagem(String nome) {
+        this(UUID.randomUUID().toString(), nome);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

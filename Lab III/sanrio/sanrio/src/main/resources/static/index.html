@@ -3,42 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanrio</title>
+    <title>Personagens Sanrio</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 10px;
-            padding: 5px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
-
         h1 {
             margin-bottom: 20px;
         }
-
         .personagem {
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .personagem img {
-            margin-right: 10px;
-            height: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>Personagens Sanrio</h1>
-    <div id="personagens">
-        Carregando personagens...
-    </div>
+    <h1>Lista de Personagens Sanrio</h1>
+    <div id="personagens">Carregando personagens...</div>
 
     <script>
+        // Função para carregar a lista de personagens do backend
         async function carregarPersonagens() {
             try {
-                const response = await fetch('http://localhost:8080/personagens'); // URL ajustada para o backend Spring Boot
+                const response = await fetch('http://localhost:8080/personagens');
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 const data = await response.json();
                 const personagensDiv = document.getElementById('personagens');
@@ -46,7 +36,7 @@
                 data.forEach(personagem => {
                     const personagemDiv = document.createElement('div');
                     personagemDiv.className = 'personagem';
-                    personagemDiv.innerHTML = `<strong>ID:</strong> ${personagem.id}, <strong>Nome:</strong> ${personagem.nome}`;
+                    personagemDiv.innerHTML = `<strong>Nome:</strong> ${personagem.nome}`;
                     personagensDiv.appendChild(personagemDiv);
                 });
             } catch (error) {
@@ -55,9 +45,10 @@
             }
         }
 
+        // Carregar personagens quando a página carregar
         window.onload = () => {
             carregarPersonagens();
-        }
+        };
     </script>
 </body>
 </html>

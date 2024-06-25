@@ -22,8 +22,9 @@ public class SanrioApplication {
 
 @RestController
 @RequestMapping("/personagens")
+@CrossOrigin(origins = "*") // Adicionando suporte a CORS
 class RestApiDemoController {
-    private List<Personagem> personagens = new ArrayList<>();
+    private final List<Personagem> personagens = new ArrayList<>();
 
     public RestApiDemoController() {
         personagens.addAll(List.of(
@@ -36,29 +37,25 @@ class RestApiDemoController {
     }
 
     @GetMapping
-    List<Personagem> getPersonagem() {
+    public Iterable<Personagem> getPersonagens() {
         return personagens;
     }
 
     @GetMapping("/{id}")
-    Optional<Personagem> getPersonagemById(@PathVariable String id) {
-        for (Personagem p : personagens) {
-            if (p.getId().equals(id)) {
-                return Optional.of(p);
-            }
-        }
-        return Optional.empty();
+    public Optional<Personagem> getPersonagemById(@PathVariable String id) {
+        return personagens.stream()
+                .filter(p -> p.getId().equals(id))
+                .findFirst();
     }
 
     @PostMapping
-    Personagem postPersonagem(@RequestBody Personagem personagem) {
+    public Personagem postPersonagem(@RequestBody Personagem personagem) {
         personagens.add(personagem);
         return personagem;
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<Personagem> putPersonagem(@PathVariable String id,
-                                             @RequestBody Personagem personagem) {
+    public ResponseEntity<Personagem> putPersonagem(@PathVariable String id, @RequestBody Personagem personagem) {
         int personagemIndex = -1;
 
         for (Personagem p : personagens) {
@@ -68,13 +65,13 @@ class RestApiDemoController {
             }
         }
 
-        return (personagemIndex == 1) ?
+        return (personagemIndex == -1) ?
                 new ResponseEntity<>(postPersonagem(personagem), HttpStatus.CREATED) :
                 new ResponseEntity<>(personagem, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    void deletePersonagem(@PathVariable String id) {
+    public void deletePersonagem(@PathVariable String id) {
         personagens.removeIf(p -> p.getId().equals(id));
     }
 }

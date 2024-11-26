@@ -127,6 +127,12 @@ Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o n�
 #### Soft Skills
 Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. 
 Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+- Java
+- Vue
+- Sistema de API (integração front e back)
+
+Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+Interpretação - em relação a compreender as necessidades do cliente e repassar de forma clara para os integrantes.
 
 ----
 

@@ -62,11 +62,58 @@ Além destas tecnologias, foram usadas também:
 
 #### Contribuições Pessoais
 Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
-- Fui master, burndow, controle de tasks e horas.
-- backlog
-- fluxogarma do projeto
-- visualizar e editar times
-- feedback na avaliação
+- Fui master, burndow, controle de tasks e horas;
+- backlog;
+- fluxogarma do projeto;
+- visualizar e editar times;
+- feedback na avaliação.
+
+#### Descrição
+* Detalhamento
+> Discutir não só o que deu certo, mas também o que deu errado (porque escolheu esse caminho ?)
+
+#### Aprendizado 
+#### Hard Skills
+Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
+Python - sei fazer com ajuda
+Lógica de programação - sei fazer com ajuda
+
+#### Soft Skills
+Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. 
+Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+
+Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+Gestão - Precisei exercitar minhas habilidades de gestão levando em conta as disponibilidades dos membros,para não atrapalhar com as atividades das disciplinas
+
+> Não colocar apenas o tópico mas comprovar que houve o apendizado. (exemplos e explicar porque, como etc)
+
+----
+
+### Em 2023-2 Sistema Gerenciados de TG
+[GIT](https://github.com/iNineBD/DataFlow-3Sem2024)
+
+O projeto consistia em criar uma aplicação para auxiliar um professor com a gestão dos Trabalhos de Graduações (TG's), de forma prática e eficiente, por conta disso foi proposto como ferramenta a criação de um Sistema de Gerenciamento de Banco de Dados, desenvolvido com o foco em simplificar e centralizar toda a administração dos TGs, permitindo o acompanhamento eficiente durante as etapas, prazos de entrega e status dos projetos.
+
+![image](https://github.com/user-attachments/assets/d6228f85-a0a8-4906-a38b-d4be1dccdbb8)
+
+
+![image](https://github.com/user-attachments/assets/5bc2e1cc-7960-40de-83fb-f784b9060a4c)
+
+
+#### Tecnologias Utilizadas
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Scene Builder](https://img.shields.io/badge/scene_builder-orange.svg?style=for-the-badge&logo=&logoColor=orange)
+![ClickUp](https://img.shields.io/badge/clickup-%237B68EE.svg?&style=for-the-badge&logo=clickup&logoColor=white)
+
+#### Contribuições Pessoais
+Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
+- Fui PO, fiz o Backlog e contato constante com o cliente;
+- Criei a funcionalidade de filtr de email do aluno;
+- Criei o relatório de acompanhamento de entregas;
+- Criei o relatório de acompanhamento de entregas e alunos aptos a defender.
 
 #### descrição
 * Detalhamento
@@ -76,23 +123,57 @@ Apresente suas contribuições no projeto. Foque nas funcionalidades em que voc�
 #### Hard Skills
 Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
 
+
 #### Soft Skills
-Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. 
+Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
 
-> Não colocar apenas o tópico mas comprovar que houve o apendizado. (exemplos e explicar poorque, como etc)
-
-
-### Em 2023-2 Sistema Gerenciados de TG
-[GIT](https://github.com/iNineBD/DataFlow-3Sem2024)
-Mesmo formato
+----
 
 ### Em 2024-1 DataFlowServer
 [GIT](https://github.com/iNineBD/DataFlow-3Sem2024)
+#### Tecnologias Utilizadas
 
+
+#### Contribuições Pessoais
+Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
+
+#### descrição
+* Detalhamento
+> Discutir não só o que deu certo, mas também o que deu errado (porque escolheu esse caminho ?)
+
+#### Aprendizado 
+#### Hard Skills
+Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
+
+
+#### Soft Skills
+Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. 
+Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
+
+----
 
 ### Em 2024-2 GeoTrack
 [GIT](https://github.com/iNineBD/DataFlow-3Sem2024)
 
+#### Tecnologias Utilizadas
+
+
+#### Contribuições Pessoais
+Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
+
+#### descrição
+* Detalhamento
+> Discutir não só o que deu certo, mas também o que deu errado (porque escolheu esse caminho ?)
+
+#### Aprendizado 
+#### Hard Skills
+Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
+
+
+#### Soft Skills
+Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. 
+Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
 
 
 

@@ -170,14 +170,26 @@ Ao entrar na aplicação ele poderia realizar os seguintes processos:
 #### Contribuições Pessoais
 Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
 - Tela de Cadastro do Master
+  para desencolver essa rela foi usado o Figma, para prototipação, e para criação da tela HTML com alguns componentes Vue, com CSS para estilização. A tela é para o usuario Master cadastrar os usuários é composta por alguns campos, sendo eles:
+  * Email: que será usado para recebimento de um token de autenticação para realizar o primeiro acesso do usuário;
+  * Nível de acesso de usuário: para delimitar a quais etapas o mesmo terá acesso para vizualizar e editar;
+  * CNPJ da organização: para identificar de qual organização o usuário pertence, podendo ser da prórpia Dom Rock, como de um de seus parceiros para realizar validação das informações;
+  * Razão Social: nome ou apelido da empresa a qual o usuário pertence.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a0426ad5-4e71-4185-83db-9de7dd2330f4" alt="tela de cadastro" width="500"/>
+  <img src="https://github.com/user-attachments/assets/a0426ad5-4e71-4185-83db-9de7dd2330f4" alt="tela de cadastro" width="800"/>
 </p>
 
 - Tela de Cadastro do Usuário (primeiro acesso)
+  Tela para o usuário realizar seu primeiro acesso no sistema, onde é necessario cadastras as seguintes informações:
+    * Nome: nome do usuário para registro e identificação dentro do sistema;
+    * Email: para confirmar seu email já cadastrado pelo Master, que será também seu usuário de acesso no Login;
+    * Senha e conformação de senha: criação e confirmação de senha, para segurança da conta do usuário;
+    * Token: token que deve ser recebido no email do usuário ao ser cadastrado anteriormente, assim confirmando a identidade do usuário.
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4b0e8eb6-1fa7-4861-8328-0ca47167a060" alt="tela de primeiro acesso" width="500"/>
+  <img src="https://github.com/user-attachments/assets/4b0e8eb6-1fa7-4861-8328-0ca47167a060" alt="tela de primeiro acesso" width="800"/>
 </p>
+  
 
 - Log de Arquivo
 
@@ -199,7 +211,11 @@ Apresente suas contribuições no projeto. Foque nas funcionalidades em que voc�
 
 #### Aprendizado 
 #### Hard Skills
-Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
+Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado.
+- Java - sei fazer de forma autonoma;
+- Vue - sei fazer de forma autonoma;
+- CSS - sei fazer com autonomia;
+- Spring  - sei fazer com ajuda.
 
 
 #### Soft Skills
